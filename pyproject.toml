@@ -1,0 +1,13 @@
+[project]
+name = "training-failure-atlas"
+version = "0.1.0"
+description = "Thirteen training failures injected into real runs, recorded as telemetry, and diagnosed from it"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scikit-learn>=1.4", "torch>=2.2", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.70"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["atlas*"]
