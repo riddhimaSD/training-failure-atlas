@@ -1,0 +1,73 @@
+{
+ "v1_dev": {
+  "correct": 39,
+  "total": 39
+ },
+ "v1_held_out_100_109": {
+  "correct": 123,
+  "total": 130
+ },
+ "v2_fresh_200_209": {
+  "correct": 124,
+  "total": 130
+ },
+ "per_scenario_v1_held_out": {
+  "healthy": 10,
+  "lr_too_high": 3,
+  "lr_too_low": 10,
+  "overfitting": 10,
+  "label_noise": 10,
+  "unshuffled": 10,
+  "unnormalized_inputs": 10,
+  "dead_relus": 10,
+  "vanishing_gradients": 10,
+  "exploding_init": 10,
+  "val_distribution_shift": 10,
+  "val_leakage": 10,
+  "val_label_mismatch": 10
+ },
+ "per_scenario_v2_fresh": {
+  "healthy": 10,
+  "lr_too_high": 10,
+  "lr_too_low": 10,
+  "overfitting": 10,
+  "label_noise": 10,
+  "unshuffled": 10,
+  "unnormalized_inputs": 10,
+  "dead_relus": 10,
+  "vanishing_gradients": 10,
+  "exploding_init": 10,
+  "val_distribution_shift": 7,
+  "val_leakage": 10,
+  "val_label_mismatch": 7
+ },
+ "confusions_v1": [
+  {
+   "true": "lr_too_high",
+   "predicted": "lr_too_low",
+   "count": 4
+  },
+  {
+   "true": "lr_too_high",
+   "predicted": "healthy",
+   "count": 2
+  },
+  {
+   "true": "lr_too_high",
+   "predicted": "unshuffled",
+   "count": 1
+  }
+ ],
+ "confusions_v2": [
+  {
+   "true": "val_distribution_shift",
+   "predicted": "overfitting",
+   "count": 3
+  },
+  {
+   "true": "val_label_mismatch",
+   "predicted": "val_distribution_shift",
+   "count": 3
+  }
+ ]
+}
